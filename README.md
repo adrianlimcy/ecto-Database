@@ -23,3 +23,6 @@ Steps:
   - username
   - password
 3. mix ecto.create
+4. mix phx.gen.schema [DB Name] [table] [column:type]
+  - mix phx.gen.schema Customer customers first_name:string last_name:string email:string age:integer
+5. mix ecto.migrate

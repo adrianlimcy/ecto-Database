@@ -26,3 +26,11 @@ Steps:
 4. mix phx.gen.schema [DB Name] [table] [column:type]
   - mix phx.gen.schema Customer customers first_name:string last_name:string email:string age:integer
 5. mix ecto.migrate
+6. add validations to changeset in customer.ex
+7. use terminal to test
+  - Repo.insert(changeset)
+  - Repo.all(Customer)
+8. import Ecto.Query
+9. Repo.all(from c in Customer, select: c.email)
+  - john = Repo.one(from c in Customer, where: c.email == "jdoe@email.com")
+10. Repo.update(changeset) 
